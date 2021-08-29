@@ -12,7 +12,7 @@ def init():
 
   # Initialise model path
   model_root = os.getenv('AZUREML_MODEL_DIR')
-  tf_model_folder = 'model1'
+  tf_model_folder = 'Commonlit-Bi-LSTM'
 
   # Read training and test sets to calculate maximum length or the amount of padding required
   dataset_train = pd.read_csv(os.path.join(model_root, tf_model_folder, "assets/train.csv"))

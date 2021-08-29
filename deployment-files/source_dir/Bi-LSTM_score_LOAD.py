@@ -9,7 +9,7 @@ def init():
 
   # Initialise model path
   model_root = os.getenv('AZUREML_MODEL_DIR')
-  tf_model_folder = 'model1'
+  tf_model_folder = 'Commonlit-Bi-LSTM'
 
   # Load maximum length from max_length.txt
   with open(os.path.join(model_root, tf_model_folder, 'assets/max_length.txt')) as text:
