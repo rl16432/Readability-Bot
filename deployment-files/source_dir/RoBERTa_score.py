@@ -1,5 +1,6 @@
 import os
 import json
+import torch
 from transformers import RobertaTokenizerFast, AutoModelForSequenceClassification
 
 MAX_LENGTH = 256
@@ -24,6 +25,9 @@ def run(request):
 
     # Load data
     inputs = list(data["data"])
+
+    # Replace new lines with spaces
+    inputs = [text.replace('\n', ' ') for text in inputs]
 
     # Tokenize data using RoBERTa tokenizer
     token_seqs = tokenizer(inputs, padding = "max_length", 
