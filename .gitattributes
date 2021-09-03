@@ -1,3 +1,4 @@
 pytorch_model.bin filter=lfs diff=lfs merge=lfs -text
 /deployment-files/outputs/Commonlit-RoBERTa-Base/pytorch-model.bin filter=lfs diff=lfs merge=lfs -text
 /models/Commonlit-RoBERTa-Base/pytorch_model.bin filter=lfs diff=lfs merge=lfs -text
+/gutenberg-scrape/Commonlit-RoBERTa-Base/pytorch_model.bin filter=lfs diff=lfs merge=lfs -text
