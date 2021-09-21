@@ -1,0 +1,71 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "6jcvId",
+    "name": "ScoreIndirect",
+    "description": "For two step scoring"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "LTiWmq"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "twLpEs"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_twLpEs()}",
+          "property": "dialog.indText",
+          "value": "=@indText",
+          "invalidPrompt": "${TextInput_InvalidPrompt_twLpEs()}",
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_twLpEs()}"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "cOYdkX"
+          },
+          "property": "dialog.indTextModified",
+          "value": "=replace(replace(dialog.indText, '\"', '\\\"'), ';', '%3B')"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "u2MNpQ"
+          },
+          "activity": "${SendActivity_u2MNpQ()}"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "LF1Yss"
+          },
+          "resultProperty": "turn.indResults",
+          "url": "http://a6533821-c084-423e-8d72-604568c9f2ce.australiaeast.azurecontainer.io/score?data=[\"${dialog.indTextModified}\"]",
+          "method": "GET"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "YYPQuy"
+          },
+          "activity": "${SendActivity_YYPQuy()}"
+        }
+      ]
+    }
+  ],
+  "generator": "ScoreIndirect.lg",
+  "recognizer": "ScoreIndirect.lu.qna",
+  "id": "ScoreIndirect"
+}

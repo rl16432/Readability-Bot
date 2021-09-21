@@ -1,0 +1,82 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "NlK7qY",
+    "name": "ScoreDirect",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "d23prR"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "AC9OuZ"
+          },
+          "assignments": [
+            {
+              "property": "dialog.text",
+              "value": "=@text"
+            },
+            {
+              "property": "dialog.textModified",
+              "value": "=replace(replace(dialog.text, '\"', '\\\"'), ';', '%3B')"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "VW0JjV"
+          },
+          "condition": "=exists(dialog.text)",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "xGUi9N"
+              },
+              "activity": "${SendActivity_xGUi9N()}"
+            },
+            {
+              "$kind": "Microsoft.HttpRequest",
+              "$designer": {
+                "id": "eFPvn9"
+              },
+              "resultProperty": "turn.results",
+              "url": "http://a6533821-c084-423e-8d72-604568c9f2ce.australiaeast.azurecontainer.io/score?data=[\"${dialog.textModified}\"]",
+              "method": "GET"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "xZWbqZ"
+              },
+              "activity": "${SendActivity_xZWbqZ()}"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "FOA8ae"
+              },
+              "activity": "${SendActivity_FOA8ae()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "ScoreDirect.lg",
+  "recognizer": "ScoreDirect.lu.qna",
+  "id": "ScoreDirect"
+}

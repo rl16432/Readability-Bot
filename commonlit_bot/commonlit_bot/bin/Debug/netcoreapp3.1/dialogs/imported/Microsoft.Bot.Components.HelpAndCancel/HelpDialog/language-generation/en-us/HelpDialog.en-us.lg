@@ -1,0 +1,22 @@
+[import](common.lg)
+
+# SendActivity_HelpOverview()
+[Activity
+    Text = ${SendActivity_HelpOverview_text()}
+]
+
+# SendActivity_HelpOverview_text()
+- ```Welcome to Readability Bot. I can provide you with a readability score of the text that you send me. Try typing:
+
+\- Can you score this text?
+\- Rate "Your Input Text"
+
+Remember that your input text must go within quotation marks.```
+- ```Hello there! I can provide you with a readability score of the text that you send me. Try typing:
+
+\- Can you score this text?
+\- Rate "Your Input Text"
+
+Remember that your input text must go within quotation marks.```
+
+> Imported: 95949fcc5eb2077f9cffd10817a11340

@@ -1,0 +1,16 @@
+[import](common.lg)
+
+# SendActivity_xGUi9N()
+[Activity
+    Text = Calculating readability of "${dialog.text}"...
+]
+
+# SendActivity_xZWbqZ()
+[Activity
+    Text = "Readability Score: ${turn.results.content[0]}"
+]
+
+# SendActivity_FOA8ae()
+[Activity
+    Text = Sorry, I didn't get that.
+]

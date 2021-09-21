@@ -1,0 +1,26 @@
+[import](common.lg)
+
+# TextInput_Prompt_twLpEs()
+[Activity
+    Text = Sure. Type the text you want me to score in the message box below, enclosed within quotation marks like this: "Text."
+]
+
+# SendActivity_u2MNpQ()
+[Activity
+    Text = Calculating readability of "${dialog.indText}"
+]
+
+# SendActivity_YYPQuy()
+[Activity
+    Text = "Readability Score: ${turn.indResults.content[0]}"
+]
+
+# TextInput_InvalidPrompt_twLpEs()
+[Activity
+    Text = Sorry. I didn't get that. Have you put your text within quotation marks?
+]
+
+# TextInput_UnrecognizedPrompt_twLpEs()
+[Activity
+    Text = Sorry. I didn't get that. Have you put your text within quotation marks?
+]
