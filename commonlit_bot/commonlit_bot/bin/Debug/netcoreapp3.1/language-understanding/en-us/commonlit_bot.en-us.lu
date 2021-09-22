@@ -29,16 +29,16 @@
 
 # Score
 > add some example phrases to trigger this intent:
-- What is the readability of this: "{text}"
-- How difficult is "{text}"
-- Score "{text}"
-- Rate "{text}"
+- What is the readability of this: <{text}>
+- How difficult is <{text}>
+- Score <{text}>
+- Rate <{text}>
 
 # ScoreIndirect
 > add some example phrases to trigger this intent:
 - I would like to score some text.
 - Can you rate this text?
-- Please score
+- Can you score
 - Can you score some text for me
 - How difficult is this text
 - Give me readability of this excerpt

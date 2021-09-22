@@ -41,7 +41,8 @@
               ]
             }
           ],
-          "value": "dialog.foreach.value"
+          "value": "dialog.foreach.value",
+          "index": "dialog.foreach.index"
         }
       ]
     },

@@ -17,24 +17,139 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.TextInput",
+          "$kind": "Microsoft.IfCondition",
           "$designer": {
-            "id": "twLpEs"
+            "id": "kJyNXJ"
           },
-          "disabled": false,
-          "maxTurnCount": 3,
-          "alwaysPrompt": false,
-          "allowInterruptions": false,
-          "prompt": "${TextInput_Prompt_twLpEs()}",
-          "property": "dialog.indText",
-          "value": "=@indText",
-          "invalidPrompt": "${TextInput_InvalidPrompt_twLpEs()}",
-          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_twLpEs()}"
+          "condition": "=exists(user.seenInstructions)",
+          "actions": [
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "PCsEzs"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${TextInput_Prompt_PCsEzs()}",
+              "property": "dialog.indTextPart",
+              "value": "=@indText",
+              "invalidPrompt": "${TextInput_InvalidPrompt_PCsEzs()}",
+              "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_PCsEzs()}",
+              "validations": [
+                "startsWith(this.value, \"<\")"
+              ]
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "e3DSrP"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${TextInput_Prompt_e3DSrP()}",
+              "property": "dialog.indTextPart",
+              "value": "=@indText",
+              "invalidPrompt": "${TextInput_InvalidPrompt_e3DSrP()}",
+              "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_e3DSrP()}",
+              "validations": [
+                "startsWith(this.value, \"<\")"
+              ]
+            },
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "JteOhS"
+              },
+              "property": "user.seenInstructions",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "ERFhBe"
+          },
+          "assignments": [
+            {
+              "property": "dialog.iterator",
+              "value": "=createArray(1,1,1,1,1)"
+            },
+            {
+              "property": "dialog.indText",
+              "value": "=dialog.indTextPart"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "hP6xMx"
+          },
+          "index": "dialog.foreach.index",
+          "value": "dialog.foreach.value",
+          "actions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "chHNFU"
+              },
+              "condition": "=not(endsWith(dialog.indTextPart, \">\"))",
+              "actions": [
+                {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "thnXfH"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": true,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "prompt": "${TextInput_Prompt_thnXfH()}",
+                  "property": "dialog.indTextPart",
+                  "value": "=@indTextPart"
+                },
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "sINTgn"
+                  },
+                  "property": "dialog.indText",
+                  "value": "=concat(dialog.indText, ' ', dialog.indTextPart)"
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.BreakLoop",
+                  "$designer": {
+                    "id": "fGCQe0"
+                  }
+                }
+              ]
+            }
+          ],
+          "itemsProperty": "dialog.iterator"
         },
         {
           "$kind": "Microsoft.SetProperty",
           "$designer": {
-            "id": "cOYdkX"
+            "id": "AONyLk"
+          },
+          "property": "dialog.indText",
+          "value": "=trim(join(subArray(split(dialog.indText, \"\"), 1, count(split(dialog.indText, \"\")) -1), \"\"))"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "bgUP9Q"
           },
           "property": "dialog.indTextModified",
           "value": "=replace(replace(dialog.indText, '\"', '\\\"'), ';', '%3B')"
