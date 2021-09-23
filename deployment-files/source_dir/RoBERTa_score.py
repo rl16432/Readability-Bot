@@ -45,4 +45,3 @@ def run(request):
     print("Results: " + str(outputs))
 
     return outputs
-

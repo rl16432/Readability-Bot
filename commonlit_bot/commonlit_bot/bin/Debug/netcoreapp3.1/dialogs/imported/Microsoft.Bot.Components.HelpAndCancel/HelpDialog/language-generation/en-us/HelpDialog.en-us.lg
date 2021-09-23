@@ -8,26 +8,22 @@
 # SendActivity_HelpOverview_text()
 - ```Welcome to Readability Bot. I can provide you with a readability score of the text that you send me. Try typing:
 
+• Can you score this text
 
-\- Can you score this text?
-
-\- Rate ~Your Input Text~
-
-
-Remember that your input text must go within tildes like this: ~Your Text~.
-
-
-Sometimes the text which you input may be too long for me to handle. You can get around this by first sending '~Your very long text' without the closing bracket, and continuing your text in your next message. When you want to end the text, simply end your message with a '~'.```
+• Rate &lt;Your Input Text>```
 - ```Hello there! I can provide you with a readability score of the text that you send me. Try typing:
 
+•  Can you score this text
 
-\- Can you score this text?
-
-\- Rate ~Your Input Text~
-
-Remember that your input text must go within tildes like this: ~Your Text~.
-
-
-Sometimes the text which you input may be too long for me to handle. You can get around this by first sending '~Your very long text' without the closing bracket, and continuing your text in your next message. When you want to end the text, simply end your message with a '~'.```
+•  Rate &lt;Your Input Text>```
 
 > Imported: 95949fcc5eb2077f9cffd10817a11340
+# SendActivity_Ige0Eb()
+[Activity
+    Text = Remember that your input text must go within angled brackets like this: &lt;Your Text.>
+]
+
+# SendActivity_18TLVv()
+[Activity
+    Text = Sometimes the text which you input may be too long for me to handle. You can get around this by first sending &quot;&lt;Your very long text...&quot; without the closing bracket, and continuing your text in your next message. When you want to end the text, simply end your message with a &quot;>&quot;.
+]

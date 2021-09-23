@@ -56,6 +56,14 @@
               "method": "GET"
             },
             {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "zuLAW2"
+              },
+              "property": "dialog.yearLevel",
+              "value": "=if(greaterOrEquals(turn.results, 0.3), \"Year 9-\", if(greaterOrEquals(turn.results, -0.1), \"Year 9\", if(greaterOrEquals(turn.results, -0.6), \"Year 10\", if(greaterOrEquals(turn.results, -1.1), \"Year 11\", if(greaterOrEquals(turn.results, -1.6), \"Year 12\", if(greaterOrEquals(turn.results, -2.1), \"Year 13\", \"Year 13+\"))))))"
+            },
+            {
               "$kind": "Microsoft.SendActivity",
               "$designer": {
                 "id": "xZWbqZ"
