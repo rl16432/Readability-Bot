@@ -7,7 +7,7 @@
 
 # SendActivity_xZWbqZ()
 [Activity
-    Text = "Readability Score: ${turn.results.content[0]}"
+    Text = Readability Score: ${turn.results.content[0]}
 ]
 
 # SendActivity_FOA8ae()

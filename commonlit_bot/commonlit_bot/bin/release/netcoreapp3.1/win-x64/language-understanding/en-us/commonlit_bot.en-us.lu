@@ -1,0 +1,50 @@
+# Cancel
+- cancel
+- quit
+- abort
+- exit
+- never mind
+- forget about it
+- just stop already
+- end this now
+
+# Help
+- help
+- im stuck
+- how do you work
+- what can you do
+- what can you help me with
+- i need help
+- i need some assistance
+
+# None
+- where is my car?
+- I want to order a pizza
+- place an item on hold
+- Is it going to rain?
+- turn on the lights
+- check my account balance
+- do unicorns really exist
+- duck
+
+# Score
+> add some example phrases to trigger this intent:
+- What is the readability of this: <{text}>
+- How difficult is <{text}>
+- Score <{text}>
+- Rate <{text}>
+
+# ScoreIndirect
+> add some example phrases to trigger this intent:
+- I would like to score some text.
+- Can you rate this text?
+- Can you score
+- Can you score some text for me
+- How difficult is this text
+- Give me readability of this excerpt
+- How difficult is this excerpt
+- How hard is this?
+
+> entity definitions:
+
+

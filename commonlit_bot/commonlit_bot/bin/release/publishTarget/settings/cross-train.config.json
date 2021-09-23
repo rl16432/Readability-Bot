@@ -1,0 +1,22 @@
+{
+  "commonlit_bot.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "": [
+        "WelcomeDialog.en-us"
+      ],
+      "Cancel": [
+        "CancelDialog.en-us"
+      ],
+      "Help": [
+        "HelpDialog.en-us"
+      ],
+      "Score": [
+        "ScoreDirect.en-us"
+      ],
+      "ScoreIndirect": [
+        "ScoreIndirect.en-us"
+      ]
+    }
+  }
+}

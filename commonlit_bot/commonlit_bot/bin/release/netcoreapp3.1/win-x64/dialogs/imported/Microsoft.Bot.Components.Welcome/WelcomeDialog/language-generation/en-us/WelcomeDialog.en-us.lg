@@ -1,0 +1,24 @@
+[import](common.lg)
+
+# SendActivity_WelcomeReturningUser()
+[Activity
+    Text = ${SendActivity_WelcomeReturningUser_text()}
+]
+
+# SendActivity_WelcomeReturningUser_text()
+- 🖐️ Welcome back to Readability Bot! How can I help you today?
+- 🖐️ Hello again! Welcome back to Readability Bot. What can I help with?
+- 🖐️ Good to see you again. Welcome back to Readability Bot. What do you want to do today?
+- 🖐️ Hey, there! Welcome back to Readability Bot. Let's get started.
+- 🖐️ Hello again! Welcome back to Readability Bot. How can I help?
+# SendActivity_WelcomeNewUser()
+[Activity
+    Text = ${SendActivity_WelcomeNewUser_text()}
+]
+
+# SendActivity_WelcomeNewUser_text()
+- 🖐️ Hey, there! Welcome to Readability Bot. How can I help you today?
+- 🖐️ Hi! Welcome to Readability Bot. How can I help?
+- 🖐️ Hello! Welcome to Readability Bot. What do you want to do today?
+
+> Imported: ecb31044e0e5c0b54f49870e6872f158

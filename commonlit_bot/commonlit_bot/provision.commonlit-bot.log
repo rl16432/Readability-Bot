@@ -1,0 +1,20 @@
+{
+  "profileName": "commonlit-bot",
+  "jobId": "6fd016e5-b51c-475c-aafa-39742088b77b",
+  "projectId": "20957.198173405155",
+  "time": "2021-09-23T00:00:43.963Z",
+  "log": [
+    "Creating Azure resources...",
+    "Checking the Existence of the Resource Group ...",
+    "Creating Resource Group ...",
+    "> Creating App Registration ...",
+    "Start to add password for App, Id : 0771646f-5d3c-4908-8acb-75c8708a01a7",
+    "Add application password failed, retrying ...",
+    "> Create App Registration Success! ID: 0771646f-5d3c-4908-8acb-75c8708a01a7",
+    "Deploying Web App Resource ...",
+    "Deploying Bot Resource ...",
+    "Deploying Luis Authoring Resource ...",
+    "Deploying Luis Resource ...",
+    "Provisioning completed successfully!"
+  ]
+}

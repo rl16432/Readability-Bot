@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_ScoreIndirect",
+  "recognizers": {
+    "en-us": "ScoreIndirect.en-us.lu",
+    "": "ScoreIndirect.en-us.lu"
+  }
+}
