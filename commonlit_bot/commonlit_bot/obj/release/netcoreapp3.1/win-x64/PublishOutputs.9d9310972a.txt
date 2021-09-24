@@ -284,7 +284,7 @@ D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\rel
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\publishTarget\hostfxr.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\publishTarget\hostpolicy.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\publishTarget\mscordaccore.dll
-D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\publishTarget\mscordaccore_amd64_amd64_4.700.21.41101.dll
+D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\publishTarget\mscordaccore_amd64_amd64_4.700.21.31506.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\publishTarget\mscordbi.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\publishTarget\mscorrc.debug.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\publishTarget\mscorrc.dll

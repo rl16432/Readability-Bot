@@ -25,5 +25,6 @@
 
 # SendActivity_18TLVv()
 [Activity
-    Text = Sometimes the text which you input may be too long for me to handle. You can get around this by first sending &quot;&lt;Your very long text...&quot; without the closing bracket, and continuing your text in your next message. When you want to end the text, simply end your message with a &quot;>&quot;.
+    Text = Sometimes the text which you send may be too long for me to handle. You can get around this by first sending &quot;&lt;Your very long text...&quot; without the closing bracket, and continuing your text in your next message. When you want to end the text, simply end your message with a &quot;>&quot;.
 ]
+

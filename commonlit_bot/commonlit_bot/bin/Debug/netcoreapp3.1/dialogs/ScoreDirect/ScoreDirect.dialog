@@ -51,9 +51,93 @@
               "$designer": {
                 "id": "eFPvn9"
               },
-              "resultProperty": "turn.results",
+              "resultProperty": "turn.dirResults",
               "url": "http://a6533821-c084-423e-8d72-604568c9f2ce.australiaeast.azurecontainer.io/score?data=[\"${dialog.textModified}\"]",
               "method": "GET"
+            },
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "QC4XpG"
+              },
+              "assignments": [
+                {
+                  "property": "user.yearLevels",
+                  "value": [
+                    "9-",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "13+"
+                  ]
+                },
+                {
+                  "property": "user.boundaryScores",
+                  "value": [
+                    0.3,
+                    -0.1,
+                    -0.6,
+                    -1.1,
+                    -1.7,
+                    -2.3
+                  ]
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.Foreach",
+              "$designer": {
+                "id": "WDHg6P"
+              },
+              "index": "dialog.foreach.index",
+              "value": "dialog.foreach.value",
+              "actions": [
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "DL2XKx"
+                  },
+                  "condition": "=greaterOrEquals(turn.dirResults.content[0], dialog.foreach.value)",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "13GtQe"
+                      },
+                      "property": "dialog.yearLevel",
+                      "value": "Year ${user.yearLevels[dialog.foreach.index]}"
+                    },
+                    {
+                      "$kind": "Microsoft.BreakLoop",
+                      "$designer": {
+                        "id": "KqIDou"
+                      }
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.IfCondition",
+                      "$designer": {
+                        "id": "P5ON1w"
+                      },
+                      "condition": "=equals(dialog.foreach.index, count(user.boundaryScores)-1)",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SetProperty",
+                          "$designer": {
+                            "id": "noX7zs"
+                          },
+                          "property": "dialog.yearLevel",
+                          "value": "Year ${user.yearLevels[6]}"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "itemsProperty": "user.boundaryScores"
             },
             {
               "$kind": "Microsoft.SendActivity",
@@ -61,6 +145,13 @@
                 "id": "xZWbqZ"
               },
               "activity": "${SendActivity_xZWbqZ()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "pVa6yt"
+              },
+              "activity": "${SendActivity_pVa6yt()}"
             }
           ],
           "elseActions": [

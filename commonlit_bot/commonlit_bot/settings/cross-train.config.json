@@ -16,6 +16,9 @@
       ],
       "ScoreIndirect": [
         "ScoreIndirect.en-us"
+      ],
+      "Hello": [
+        "WelcomeDialog.en-us"
       ]
     }
   }

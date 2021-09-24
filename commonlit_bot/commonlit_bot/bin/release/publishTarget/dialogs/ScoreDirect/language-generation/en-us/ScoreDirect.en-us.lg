@@ -7,10 +7,15 @@
 
 # SendActivity_xZWbqZ()
 [Activity
-    Text = Readability Score: ${turn.results.content[0]}
+    Text = Readability Score: ${turn.dirResults.content[0]}
 ]
 
 # SendActivity_FOA8ae()
 [Activity
     Text = Sorry, I didn't get that.
+]
+
+# SendActivity_pVa6yt()
+[Activity
+    Text = Estimated Year Level: ${dialog.yearLevel}
 ]

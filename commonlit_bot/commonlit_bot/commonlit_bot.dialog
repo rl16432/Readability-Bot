@@ -171,6 +171,25 @@
         }
       ],
       "priority": 1
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "4Ziql7",
+        "name": "Hello"
+      },
+      "intent": "Hello",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "qJf786"
+          },
+          "activityProcessed": true,
+          "dialog": "WelcomeDialog"
+        }
+      ],
+      "priority": 3
     }
   ],
   "generator": "commonlit_bot.lg",

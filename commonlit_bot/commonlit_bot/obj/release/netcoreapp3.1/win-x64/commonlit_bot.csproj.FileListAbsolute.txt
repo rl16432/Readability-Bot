@@ -361,7 +361,6 @@ D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\rel
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\netcoreapp3.1\win-x64\hostfxr.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\netcoreapp3.1\win-x64\hostpolicy.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\netcoreapp3.1\win-x64\mscordaccore.dll
-D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\netcoreapp3.1\win-x64\mscordaccore_amd64_amd64_4.700.21.41101.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\netcoreapp3.1\win-x64\mscordbi.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\netcoreapp3.1\win-x64\mscorrc.debug.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\netcoreapp3.1\win-x64\mscorrc.dll
@@ -498,7 +497,6 @@ D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\rel
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\netcoreapp3.1\win-x64\System.Windows.Extensions.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\netcoreapp3.1\win-x64\aspnetcorev2_inprocess.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\obj\release\netcoreapp3.1\win-x64\commonlit_bot.csproj.AssemblyReference.cache
-D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\obj\release\netcoreapp3.1\win-x64\commonlit_bot.GeneratedMSBuildEditorConfig.editorconfig
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\obj\release\netcoreapp3.1\win-x64\commonlit_bot.AssemblyInfoInputs.cache
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\obj\release\netcoreapp3.1\win-x64\commonlit_bot.AssemblyInfo.cs
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\obj\release\netcoreapp3.1\win-x64\commonlit_bot.csproj.CoreCompileInputs.cache
@@ -512,3 +510,4 @@ D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\obj\rel
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\obj\release\netcoreapp3.1\win-x64\commonlit_bot.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\obj\release\netcoreapp3.1\win-x64\commonlit_bot.pdb
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\obj\release\netcoreapp3.1\win-x64\commonlit_bot.genruntimeconfig.cache
+D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\release\netcoreapp3.1\win-x64\mscordaccore_amd64_amd64_4.700.21.31506.dll

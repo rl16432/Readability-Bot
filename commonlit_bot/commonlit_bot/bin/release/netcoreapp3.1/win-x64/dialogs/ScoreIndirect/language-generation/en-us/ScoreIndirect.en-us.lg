@@ -49,3 +49,8 @@
 [Activity
     Text = Sure. Type the text you want me to score in the message box below, enclosed within angled brackets like this, &lt;Text.>
 ]
+
+# SendActivity_PprTeN()
+[Activity
+    Text = Estimated Year Level: ${dialog.yearLevel}
+]

@@ -159,7 +159,7 @@
             "id": "bgUP9Q"
           },
           "property": "dialog.indTextModified",
-          "value": "=replace(replace(dialog.indText, '\"', '\\\"'), ';', '%3B')"
+          "value": "=replace(replace(replace(dialog.indText, '\"', '\\\"'), ';', '%3B'), \"\\n\", \" \")"
         },
         {
           "$kind": "Microsoft.SendActivity",
@@ -178,11 +178,102 @@
           "method": "GET"
         },
         {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "mUlAUf"
+          },
+          "assignments": [
+            {
+              "property": "user.yearLevels",
+              "value": [
+                "9-",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "13+"
+              ]
+            },
+            {
+              "property": "user.boundaryScores",
+              "value": [
+                0.3,
+                -0.1,
+                -0.6,
+                -1.1,
+                -1.7,
+                -2.3
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "exm4lI"
+          },
+          "index": "dialog.foreach.index",
+          "value": "dialog.foreach.value",
+          "actions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "inBnOc"
+              },
+              "condition": "=greaterOrEquals(turn.indResults.content[0], dialog.foreach.value)",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "RbKyuE"
+                  },
+                  "property": "dialog.yearLevel",
+                  "value": "Year ${user.yearLevels[dialog.foreach.index]}"
+                },
+                {
+                  "$kind": "Microsoft.BreakLoop",
+                  "$designer": {
+                    "id": "fR6L9L"
+                  }
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "ruCfg8"
+                  },
+                  "condition": "=equals(dialog.foreach.index, count(user.boundaryScores)-1)",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "2QXRsB"
+                      },
+                      "property": "dialog.yearLevel",
+                      "value": "Year ${user.yearLevels[6]}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "itemsProperty": "user.boundaryScores"
+        },
+        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "YYPQuy"
           },
           "activity": "${SendActivity_YYPQuy()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "PprTeN"
+          },
+          "activity": "${SendActivity_PprTeN()}"
         }
       ]
     }
