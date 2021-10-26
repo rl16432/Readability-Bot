@@ -106,7 +106,6 @@ D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\Deb
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\obj\Debug\netcoreapp3.1\commonlit_bot.csproj.AssemblyReference.cache
-D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\obj\Debug\netcoreapp3.1\commonlit_bot.GeneratedMSBuildEditorConfig.editorconfig
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\obj\Debug\netcoreapp3.1\commonlit_bot.AssemblyInfoInputs.cache
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\obj\Debug\netcoreapp3.1\commonlit_bot.AssemblyInfo.cs
 D:\Documents\Engineering\MSA Phase 2 Project\commonlit_bot\commonlit_bot\obj\Debug\netcoreapp3.1\commonlit_bot.csproj.CoreCompileInputs.cache

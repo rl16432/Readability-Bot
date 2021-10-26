@@ -7,7 +7,7 @@
 
 # SendActivity_YYPQuy()
 [Activity
-    Text = "Readability Score: ${turn.indResults.content[0]}"
+    Text = Readability Score: ${turn.indResults.content[0]}
 ]
 
 # TextInput_Prompt_thnXfH()
@@ -30,13 +30,9 @@
     Text = Sorry. I didn't get that. Have you put your text within angled brackets like this: <Your Text>
 ]
 
-# TextInput_Prompt_e3DSrP_text()
-- ```Sure. Type the text you want me to score in the message box below, enclosed within angled brackets like this, <Text>.
-
-If your text is very long, you can first type your text like this, <Text, and continue your text on the next message. You do not need to start your message with '<' on the next message, but indicate if your text ends by adding '>' at the end of your message.```
 # TextInput_Prompt_e3DSrP()
 [Activity
-    Text = ${TextInput_Prompt_e3DSrP_text()}
+    Text = If your text is very long, you can type your text in multiple messages, by starting with &quot;&lt;Your text...&quot;, in your first message, and finishing your text with a closing bracket on subsequent messages like this: &quot;...the end of your text.>&quot;
 ]
 
 # TextInput_UnrecognizedPrompt_e3DSrP()
@@ -47,4 +43,14 @@ If your text is very long, you can first type your text like this, <Text, and co
 # TextInput_InvalidPrompt_e3DSrP()
 [Activity
     Text = Sorry. I didn't get that. Have you put your text within angled brackets like this: <Your Text>
+]
+
+# SendActivity_W2Hu86()
+[Activity
+    Text = Sure. Type the text you want me to score in the message box below, enclosed within angled brackets like this, &lt;Text.>
+]
+
+# SendActivity_PprTeN()
+[Activity
+    Text = Estimated Year Level: ${dialog.yearLevel}
 ]
